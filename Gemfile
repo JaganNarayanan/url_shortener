@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '4.2.5'
-gem 'pg', '~> 0.15'
+gem 'rails'
+gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
@@ -12,7 +12,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 
 group :development, :test do
+  gem "rspec-given"
   gem 'byebug'
+  gem 'spring'
+  gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-puma'
@@ -27,4 +30,3 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-

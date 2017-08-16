@@ -10,12 +10,13 @@ RSpec.describe UrlsController, type: :controller do
   end
 
   describe "POST #create" do
-    let( :valid_params )          { { url: { long_url: "http://example.com" }} }
-    let( :invalid_params )        { { url: { long_url: "google" }} }
+    let( :valid_params ) { { url: { long_url: "http://example.com" }} }
+    let( :invalid_params ) { { url: { long_url: "google" }} }
 
 
     context "when valid params" do
       it "should save url" do
+        byebug
         post :create, valid_params
         expect(Url.find_by(valid_params[:url])).not_to eq nil
       end
@@ -34,6 +35,7 @@ RSpec.describe UrlsController, type: :controller do
       end
 
       it "should render with generated errors" do
+
         post :create, invalid_params
         expect(assigns(:errors)).not_to eq nil
       end
