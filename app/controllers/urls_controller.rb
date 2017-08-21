@@ -6,7 +6,7 @@ class UrlsController < ApplicationController
   def show
     @url = Url.find(params[:id])
   end
-  
+
   def new
     @url = Url.new
   end
